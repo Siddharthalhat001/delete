@@ -19,6 +19,6 @@ jobs:
           image: siddharthalhat001/sdev
           tags: 1.0.0-manual-1
           registry: docker.io
-          dockerfile: .
+          dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
