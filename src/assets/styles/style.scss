@@ -1,0 +1,67 @@
+@import "shared";
+
+body {
+  font-family: $font-regular;
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+  margin: 0vh 0vw;
+}
+
+.elipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tooltip {
+  font-size: 14px !important;
+  background-color: $white !important;
+  border: 1px solid $grey-9;
+  line-height: 1.4 !important;
+  padding: 10px !important;
+  box-shadow: 0px 2px 4px 0px $box-shadow-1;
+  border-radius: 10px !important;
+  color: $black !important;
+
+  .MuiTooltip-arrow {
+    &:before {
+      border: 1px solid $grey-9;
+      background-color: $white;
+    }
+  }
+}
+
+.toast-container {
+  width: fit-content !important;
+
+  .Toastify__toast {
+    border-radius: 4px;
+    padding: 15px;
+    min-height: 50px;
+    color: $white;
+    box-shadow: 0px 4px 4px 0px $box-shadow-1;
+
+    &.Toastify__toast--success {
+      background-color: $success;
+    }
+
+    &.Toastify__toast--error {
+      background-color: $error;
+    }
+  }
+
+  .Toastify__toast-body {
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+  }
+}

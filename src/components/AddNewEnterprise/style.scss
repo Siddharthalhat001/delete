@@ -1,0 +1,100 @@
+@import "../../assets/styles/shared";
+
+.add-new-enterprise-form-main {
+  background-color: $grey-8;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .add-new-enterprise-top {
+    .add-new-enterprise-top-root {
+      display: flex;
+      gap: 80px;
+
+      .add-new-enterprise-top-left {
+        width: 50%;
+        
+        .label {
+          color: $primary-2;
+          margin-bottom: 30px;
+          display: inline-block;
+          font-family: $font-medium;
+        }
+
+        .add-logo-label {
+          color: $primary-2;
+          display: inline-block;
+          font-family: $font-medium;
+        }
+
+        .logo-validations { 
+          margin: 10px 0px 20px 0px;
+          padding: 0px 0px 0px 10px;
+
+          li {
+            font-size: 12px;
+            color: $black;
+            font-family: $font-regular;
+            font-style: italic;
+          }
+        }
+      }
+
+      .add-new-enterprise-top-right {
+        width: 50%;
+
+        .address-label {
+          color: $primary-2;
+          margin-bottom: 30px;
+          display: inline-block;
+          font-family: $font-medium;
+        }
+
+        .mfa-label {
+          color: $primary-2;
+          margin-top: 30px;
+          margin-bottom: 10px;
+          display: inline-block;
+          font-family: $font-medium;
+
+          > em {
+            font-size: 12px;
+            color: $black;
+            font-family: $font-regular;
+            display: block;
+            margin-top: 6px;
+          }
+        }
+
+        .switch {
+          // background-color: $white;
+          padding: 5px;
+          width: fit-content;
+          min-width: 100px;
+        }
+      }
+
+      .add-new-enterprise-input {
+        background-color: $white;
+        border: 1px solid $grey-1;
+
+        &.disabled {
+          background-color: $grey-3;
+        }
+      }
+    }
+  }
+
+  .add-new-enterprise-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    .add-new-enterprise-form-buttons {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}

@@ -1,0 +1,364 @@
+@import "../../assets/styles/shared";
+
+// Form Field Box
+.d-form-field-root {
+  width: 100%;
+  margin-bottom: 20px;
+
+  > label {
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+
+    .required-mark {
+      color: $error;
+    }
+  }
+}
+
+
+// Input
+.d-input {
+  height: 30px;
+  box-sizing: border-box;
+  background: $grey-2;
+  border: 1px solid $grey-3;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 12px;
+  padding: 5px 12px;
+  outline: none;
+}
+
+// Error text
+.d-error {
+  color: $error;
+  font-size: 12px !important;
+  margin-top: 5px;
+  margin-bottom: 0px !important;
+}
+
+
+// Spinner
+.d-spinner {
+  color: $white !important;
+}
+
+
+// Button
+.d-btn {
+  height: 32px;
+  font-size: 14px;
+  font-family: $font-regular;
+  color: $white;
+  width: 100%;
+  min-width: 100px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &.primary {
+    background-color: $primary;
+  }
+
+  &.success {
+    background-color: $success;
+  }
+
+  &.error {
+    background-color: $error;
+  }
+
+  &.greyed {
+    background-color: $grey-5;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    background-color: $grey-17;
+    color: $grey-3;
+    cursor: not-allowed;
+  }
+
+  &.loading {
+    pointer-events: none;
+  }
+}
+
+// Table Box
+.d-table-box-root {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .table-options {
+    .table-box-header-root {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .table-box-header {
+        color: $grey-7;
+        font-size: 16px;
+        font-family: $font-medium;
+      }
+
+      .table-box-image {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .table-main {
+    .table {
+      border-collapse: separate;
+      border-spacing: 0px;
+
+      .table-head-row {
+        background-color: $white;
+
+        > * {
+          font-size: 14px;
+        }
+  
+        .MuiTableCell-root {
+          padding: 10px;
+          line-height: 0;
+          height: 40px;
+          box-sizing: border-box;
+          border-bottom: 2px solid $grey-13;
+          border-top: 1px solid $grey-13;
+  
+          .sort-label {
+            font-family: $font-bold;
+            color: $grey-7;
+          }
+        }
+
+        .MuiTableCell-root:first-child {
+          border-left: 1px solid $grey-13;
+          border-top-left-radius: 4px;
+          padding-left: 15px;
+        }
+
+        .MuiTableCell-root:last-child {
+          border-right: 1px solid $grey-13;
+          border-top-right-radius: 4px;
+        }
+      }
+  
+      .table-body-row {
+        &:nth-child(odd) {
+          background-color: $grey-14;
+        }
+
+        &:nth-child(even) {
+          background-color: $grey-8;
+        }
+
+        > * {
+          font-size: 14px;
+        }
+        
+        .MuiTableCell-root {
+          padding: 10px;
+          height: 40px;
+          box-sizing: border-box;
+        }
+
+        .MuiTableCell-root:first-child {
+          border-left: 1px solid $grey-13;
+          padding-left: 15px;
+        }
+
+        .MuiTableCell-root:last-child {
+          border-right: 1px solid $grey-13;
+        }
+      }
+    }
+    
+    .table-pagination {
+      height: 54px;
+      background: $grey-14;
+      border: 1px solid $grey-15;
+      box-sizing: border-box;
+      padding-left: 15px;
+      display: flex;
+      align-items: center;
+
+      .paging-widget {
+        display: flex;
+        gap: 1px;
+        margin-right: 16px;
+
+        .paging-item {
+          height: 32px;
+          width: 32px;
+          background-color: $grey-16;
+          color: $black;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          &.primary {
+            background-color: $primary-3;
+            color: $white;
+          }
+
+          &.disabled {
+            background-color: $grey-17;
+            color: $white;
+            cursor: default;
+          }
+
+          &.dots {
+            background-color: $grey-16;
+            color: $primary-3;
+          }
+
+          &:first-child { 
+            border-radius: 4px 0px 0px 4px;
+          }
+
+          &:last-child { 
+            border-radius: 0px 4px 4px 0px;
+          }
+        }
+      }
+
+      .paging-text {
+        color: $grey-5;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// Dropzone
+.d-dropzone {
+  width: fit-content;
+
+  .dropzone-main {
+    background: $white;
+    border: 1px dashed $black;
+    width: 192px;
+    height: 192px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    .file-name-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      > label {
+        font-size: 14px;
+      }
+
+      .cancel-icon {
+        font-size: 18px;
+        color: $error;
+        cursor: pointer;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        margin-left: 0px;
+      }
+
+      .img-preview {
+        display: block;
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    .dropzone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+      width: 192px;
+      height: 192px;
+
+      .text {
+        font-size: 14px;
+      }
+    }
+
+    .drop-btn {
+      width: fit-content;
+    }
+
+    .validation-text {
+      font-size: 12px;
+    }
+  }
+}
+
+// Switch
+.d-switch {
+  display: flex;
+  align-items: center;
+
+  .switch-root {
+    padding: 0px;
+    width: 63px;
+    height: fit-content;
+
+    & .Mui-checked+.MuiSwitch-track {
+      background-color: $success !important;
+      opacity: 1 !important;
+    }
+
+    .switch-base {
+      padding: 0px;
+
+      .switch-thumb {
+        box-shadow: none;
+        background-color: $white;
+        width: 20px;
+        height: 20px;
+        margin: 3px;
+      }
+    }
+
+    .switch-track {
+      border-radius: 15px;
+      height: 26px;
+      width: 48px;
+      background-color: $error;
+      opacity: 1;
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+      }
+
+      &:before {
+        background-image: url(../../assets/images/right-check-mark.svg);
+        background-size: 20px;
+        left: 4px;
+        top: 10px;
+      }
+
+      &:after {
+        background-image: url(../../assets/images/cross-check-mark.svg);
+        background-size: 20px;
+        right: 22px;
+        top: 11px;
+      }
+    }
+  }
+}

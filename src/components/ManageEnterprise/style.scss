@@ -1,0 +1,40 @@
+@import "../../assets/styles/shared";
+
+.enterprise-list-main {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+
+  .enterprise-list-top-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .search-input {
+      min-width: 250px;
+    }
+  }
+
+  .enterprise-name {
+    a {
+      cursor: pointer;
+      color: $primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .enterprise-logo {
+    width: 50px;
+    height: 30px;
+  }
+
+  .table-box-head-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,43 @@
+@import "../assets/styles/shared";
+
+.login-main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  min-height: 100vh;
+  padding: 35px 150px 30px 65px;
+  box-sizing: border-box;
+
+  .left-section {
+    width: 70%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .right-section {
+    width: 30%;
+    min-width: 350px;
+    max-width: 450px;
+    z-index: 2;
+    position: relative;
+    background: $white;
+  }
+}
+
+.add-enterprise-main {
+  > h3 {
+    font-size: 18px;
+    color: $black;
+    font-family: $font-medium;
+    margin-bottom: 20px;
+  }
+}
+
+.manage-enterprise-main {
+  > h3 {
+    font-size: 18px;
+    color: $black;
+    font-family: $font-medium;
+    margin-bottom: 20px;
+  }
+}

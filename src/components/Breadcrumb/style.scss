@@ -1,0 +1,29 @@
+@import "../../assets/styles/shared";
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  background: $grey-11;
+  padding: 10px 24px;
+  border: 1px solid $grey-12;
+  border-radius: 8px;
+  margin: 0px -24px 20px -24px !important;
+
+  .separator {
+    color: $grey-10;
+    rotate: 115deg;
+    margin: 0px;
+  }
+
+  .link {
+    cursor: pointer;
+    color: $primary;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .no-link {
+    cursor: default;
+    color: $grey-4;
+  }
+}

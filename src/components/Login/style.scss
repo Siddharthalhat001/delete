@@ -1,0 +1,75 @@
+@import "../../assets/styles/shared";
+
+.title {
+  font-family: $font-medium;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.local-desscription {
+  width: 80%;
+  font-family: $font-light;
+  font-size: 16px;
+  margin-bottom: 45px;
+}
+
+.image-main-login {
+  position: absolute;
+  bottom: 20px;
+  width: 118%;
+  height: 70%;
+}
+
+.right-section-root {
+  border: 1px solid $grey-1;
+  border-radius: 8px;
+  height: calc(100vh - 170px);
+  padding: 50px 30px;
+  position: relative;
+
+  .top {
+    text-align: center;
+    margin-bottom: 55px;
+
+    img {
+      width: 70%;
+    }
+  }
+
+  .middle {
+    margin-bottom: 30px;
+
+    .forgot-password {
+      text-align: center;
+      margin: 30px 0px;
+
+      a {
+        color: $primary-2;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+      color: $grey-4;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    img {
+      width: 50%;
+      max-width: 200px;
+      position: absolute;
+      bottom: 20px;
+      right: 10px;
+    }
+  }
+}
